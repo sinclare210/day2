@@ -9,18 +9,18 @@ contract SaveMyNameTest is Test {
     string public bio;
     SaveMyName public saveMyName;
 
-    function setUp () public {
+    function setUp() public {
         name = "Sinclair";
         bio = "Dapps";
         saveMyName = new SaveMyName();
     }
 
-    function testFunc () public view {
+    function testFunc() public view {
         assertEq(name, "Sinclair");
         assertEq(bio, "Dapps");
     }
 
-    function testAddandRetrieve () public {
+    function testAddandRetrieve() public {
         saveMyName = new SaveMyName();
         saveMyName.add("Frank", "Married");
 
@@ -28,7 +28,5 @@ contract SaveMyNameTest is Test {
 
         assertEq(savedName, "Frank");
         assertEq(savedBio, "Married");
-
     }
-
 }

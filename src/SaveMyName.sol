@@ -2,23 +2,21 @@
 pragma solidity ^0.8.19;
 
 contract SaveMyName {
-    
     string name;
     string bio;
 
-    function add (string memory _name, string memory _bio)  public {
+    function add(string memory _name, string memory _bio) public {
         name = _name;
         bio = _bio;
     }
 
-    function retreive () public view returns(string memory, string memory){
-        return(name,bio);
+    function retreive() public view returns (string memory, string memory) {
+        return (name, bio);
     }
 
-    function SaveAndRetrieve (string memory _name, string memory _bio) public returns (string memory, string memory){
-         name = _name;
+    function SaveAndRetrieve(string memory _name, string memory _bio) public returns (string memory, string memory) {
+        name = _name;
         bio = _bio;
-        return(name,bio);
+        return (name, bio);
     }
-
 }
